@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Squito</title>
+  <meta name="description" content="Squito is the quit-porn app that doesn’t make you start over. Coming in 2027.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="squito_logo_dark.jpg">
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #d8d8d8;
+      --muted: #8a8a8a;
+      --accent: #2f6f6a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px 32px;
+    }
+
+    main {
+      width: min(520px, 100%);
+      text-align: center;
+    }
+
+    .mark {
+      width: min(280px, 72vw);
+      height: auto;
+      display: block;
+      margin: 0 auto 36px;
+    }
+
+    h1 {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+
+    .tagline {
+      margin: 0 0 14px;
+      font-size: clamp(1.15rem, 3.4vw, 1.45rem);
+      font-weight: 560;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      color: #ececec;
+    }
+
+    .pitch {
+      margin: 0 auto 28px;
+      max-width: 26em;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .when {
+      margin: 0 0 40px;
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 24px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: #cfd8d7;
+      text-decoration: none;
+      border-bottom: 1px solid #2f6f6a;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Squito</h1>
+    <img
+      class="mark"
+      src="squito_logo_dark.jpg"
+      width="280"
+      height="248"
+      alt="Squito"
+    >
+    <p class="tagline">Quit porn. Without hating yourself.</p>
+    <p class="pitch">Squito is the quit app that doesn’t make you start over. A safety system for a predictable human failure mode — not a streak, not a lock, not a lecture.</p>
+    <p class="when">Coming in 2027</p>
+  </main>
+  <footer>
+    <a href="mailto:support@squito.com">support@squito.com</a>
+  </footer>
+</body>
+</html>

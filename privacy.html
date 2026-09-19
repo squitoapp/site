@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Privacy — Squito</title>
+  <meta name="description" content="What Squito never touches, what stays on your phone, and the one thing that leaves it: a count with no name on it.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta property="og:title" content="Privacy — Squito">
+  <meta property="og:description" content="Everything about you stays on your phone. The only thing we learn from you is a number with no name on it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://squito.com/privacy.html">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <style>
+    /* Same rule as the front page: no web fonts, no scripts, no third-party
+       requests. This page says the site calls no one, so it calls no one. */
+    :root {
+      --bg: #0b0b0b;
+      --ink: #dedede;
+      --ink-strong: #f2f2f2;
+      --muted: #8f8f8f;
+      --teal: #18a399;
+      --rule: #1f1f1f;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding: 28px 24px 28px;
+      line-height: 1.6;
+    }
+    header { width: min(40rem, 100%); margin-bottom: 40px; }
+    .home {
+      display: inline-flex; align-items: center; gap: 12px;
+      text-decoration: none; color: var(--ink); border-bottom: 0;
+    }
+    .home img { width: 36px; height: 36px; border-radius: 9px; display: block; }
+    .home span { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+    .home b { font-weight: inherit; color: var(--teal); }
+
+    main { width: min(40rem, 100%); }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 5vw, 2.2rem);
+      font-weight: 600; letter-spacing: -0.02em; line-height: 1.2;
+      color: var(--ink-strong);
+    }
+    .dated { margin: 0 0 28px; font-size: .9rem; color: var(--muted); }
+    .draft {
+      margin: 0 0 36px; padding: 16px 18px;
+      border: 1px solid var(--rule); border-left: 3px solid var(--teal);
+      border-radius: 6px; font-size: .97rem; color: var(--ink);
+    }
+    .draft strong { color: var(--ink-strong); }
+    .lead {
+      margin: 0 0 12px;
+      font-size: 1.2rem; line-height: 1.45; color: var(--ink-strong);
+    }
+    h2 {
+      margin: 44px 0 12px; padding-top: 28px;
+      border-top: 1px solid var(--rule);
+      font-size: 1.2rem; font-weight: 600; letter-spacing: -0.01em;
+      color: var(--ink-strong);
+    }
+    h3 { margin: 26px 0 8px; font-size: 1rem; font-weight: 600; color: var(--ink-strong); }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 9px; }
+    ul li { display: flex; align-items: baseline; gap: 12px; }
+    ul li::before {
+      content: ""; flex: none; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--teal); position: relative; top: -2px;
+    }
+    dl { margin: 0 0 16px; display: grid; grid-template-columns: 1fr; gap: 0; }
+    dt { color: var(--ink-strong); padding-top: 12px; border-top: 1px solid var(--rule); }
+    dt:first-child { border-top: 0; padding-top: 0; }
+    dd { margin: 2px 0 12px; color: var(--muted); }
+    a { color: #cfd8d7; text-decoration: none; border-bottom: 1px solid var(--teal); }
+    a:hover, a:focus { color: #fff; }
+    address { font-style: normal; margin: 0 0 14px; }
+
+    footer {
+      margin-top: 64px; padding-top: 8px;
+      width: min(40rem, 100%); text-align: center;
+      font-size: .92rem; color: var(--muted);
+      border-top: 1px solid var(--rule);
+    }
+    footer p { margin: 18px 0 0; }
+    footer .sep { padding: 0 .6em; color: var(--rule); }
+    footer .legal { font-size: .82rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="home" href="./" aria-label="Squito — home">
+      <img src="icon.png" width="36" height="36" alt="">
+      <span><b>s</b>quit<b>o</b></span>
+    </a>
+  </header>
+
+  <main>
+    <h1>Privacy</h1>
+    <p class="dated">Draft · last updated September 19, 2026</p>
+
+    <div class="draft">
+      <strong>This is a draft, and the app is not out yet.</strong>
+      The section about this website is in effect today. The sections about the app
+      say how it is being built to handle your data. They will be finished, reviewed by
+      an attorney, and dated here before the first public version.
+    </div>
+
+    <p class="lead">
+      Everything about you stays on your phone. The only thing we learn from you is a
+      number with no name on it.
+    </p>
+    <p>
+      If a feature would ever make that sentence untrue, the sentence wins and the feature goes.
+    </p>
+
+    <h2>What we never touch</h2>
+    <ul>
+      <li>Your browsing history. Your screen time. What other apps you use.</li>
+      <li>What you looked at. The app never records it and never asks.</li>
+      <li>Your contacts, photos, microphone or location. The app never asks for those permissions.</li>
+      <li>Advertising identifiers. There are no ad, analytics or tracking kits from other companies in the app.</li>
+      <li>An email address or an account. You don’t need either to use the app.</li>
+      <li>Reports to a partner, a spouse, a church, a sponsor or an employer. There is no way to turn this on, because it was never built.</li>
+      <li>A journal. The app has no diary and no free-text mood log, so there is none to leak.</li>
+      <li>Training an AI model on anything you write. Not now, and not later without asking you separately.</li>
+    </ul>
+    <p>We don’t sell your data, rent it, or trade it. There are no ads in the app.</p>
+
+    <h2>This website</h2>
+    <p>
+      This site sets no cookies and runs no scripts. It loads no fonts, trackers or
+      analytics from anyone. Opening a page here makes one request, to the site itself.
+    </p>
+    <p>
+      The site is hosted on GitHub Pages. Like any web host, GitHub receives the IP address
+      of each visit and keeps its own logs for security. We are not given those logs.
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>
+      covers what GitHub does with them.
+    </p>
+
+    <h2>If you email us</h2>
+    <p>
+      When you write to <a href="mailto:hello@squito.com">hello@squito.com</a> or
+      <a href="mailto:support@squito.com">support@squito.com</a>, we get your email address
+      and whatever you wrote. Our mail runs on Google Workspace. We use your message to answer you.
+      We don’t add you to a mailing list, and nothing in your email is ever connected to the app on
+      your phone. There is nothing in the app to connect it to.
+    </p>
+    <p>Ask us to delete your messages and we will.</p>
+
+    <h2>The app: what stays on your phone</h2>
+    <p>
+      The app works with no network at all. Everything personal lives on the phone and nowhere else:
+    </p>
+    <ul>
+      <li>The days you logged, and what you said they were.</li>
+      <li>What you set up: your window, your triggers, your Kit, your plan.</li>
+      <li>Which lessons and practice sessions you finished, and how the practice went.</li>
+      <li>The first name you typed, if you typed one.</li>
+    </ul>
+    <p>
+      You can change any day you logged. It is your record.
+    </p>
+    <p>
+      If you lose the phone, your iPhone’s own encrypted backup is what brings this back, under your
+      Apple account. We don’t run a sync service and we never hold a copy.
+    </p>
+
+    <h2>The app: what leaves your phone</h2>
+    <h3>Counts with no name on them</h3>
+    <p>
+      Squito counts how the app is doing: which lessons people finish, where people get stuck,
+      what they search for and don’t find, which tools get used when it’s bad. It’s how this gets better.
+    </p>
+    <p>
+      Your phone adds these up itself and sends one summary a week. The summary is built so it
+      can’t point back to you:
+    </p>
+    <ul>
+      <li>No user ID, install ID, device ID or advertising ID.</li>
+      <li>No dates or times. It carries a week number counted from install, and the upload is sent at a random time.</li>
+      <li>Ranges, never exact figures. “1–2” or “7–29 days”, never your number.</li>
+      <li>The same fixed form for everyone, every week. Nothing you typed is in it.</li>
+      <li>Country only. Nothing finer.</li>
+      <li>Your IP address is dropped when the summary arrives. It is never logged.</li>
+    </ul>
+    <p>
+      These counts are on for everyone from the moment you tap Start. The link to this notice sits
+      right above that button. There is no switch for them, because there is nothing in them that is you.
+    </p>
+    <p>
+      Four places in the app are never counted at all: the page about finding a professional and
+      the crisis numbers behind it, the ninety seconds right after a bite, the community guidelines
+      page, and the control that lets you mark a lesson done. Nobody should have a count of how many
+      men opened the crisis page. We don’t.
+    </p>
+
+    <h3>Field Notes, if you join</h3>
+    <p>
+      After launch, the app will invite you to join Field Notes, around a month in. It is how we find out
+      whether any of this works over months. Joining is your call. No is a completely fine answer,
+      and the app works exactly the same either way.
+    </p>
+    <p>
+      If you join, your phone sends one record a month under a random ID. No name, no email.
+      You can replace the ID whenever you like, which cuts the link to everything sent before.
+      Leave, and the whole history is deleted, not only what would have come next.
+    </p>
+    <p>
+      Before anything from Field Notes is published, people in it are told, with time to pull their
+      numbers out first. Joining does not give any outside researcher the use of your data.
+    </p>
+
+    <h3>Things you type</h3>
+    <p>
+      Two boxes in the app send what you typed: the ask box, when it has no answer for you, and the
+      “something else” write-ins in your profile. The app tells you at the box, at the moment it happens.
+      What you typed is scrubbed of anything identifying, stored with no link to you or your phone, and
+      read by a person, so we know what to write next.
+    </p>
+
+    <h3>The records the service needs</h3>
+    <p>
+      Purchases go through Apple. We never see your card. We keep which product you hold against a
+      random ID, so the app can unlock it and restore it.
+    </p>
+    <p>
+      If you take part in the community, we keep one record that you accepted the community guidelines:
+      the random ID, the version you accepted, and when. Nothing else is in it. The App Store’s rules for
+      community features require it.
+    </p>
+
+    <h2>How long we keep it</h2>
+    <dl>
+      <dt>The detail of a logged day</dt>
+      <dd>Twelve months on your phone, then it becomes a number. You can change that, or wipe it any time.</dd>
+      <dt>Your running numbers</dt>
+      <dd>On your phone for as long as you keep the app. Wipe them any time.</dd>
+      <dt>The counts with no name</dt>
+      <dd>Indefinitely. There is no person in them.</dd>
+      <dt>Field Notes records</dt>
+      <dd>Two years, rolling. Leave and the whole series is deleted.</dd>
+      <dt>What you typed into the ask box or a write-in</dt>
+      <dd>Six months.</dd>
+    </dl>
+
+    <h2>Deleting and exporting</h2>
+    <p>
+      Both are in the app: Settings, then Data &amp; privacy. <em>Delete my data</em> removes everything
+      on the phone, and your Field Notes history if you joined. You can also save your own record as a
+      plain file. Neither one needs an email to us.
+    </p>
+    <p>
+      Two things we can’t delete on request, because they were never attached to you: the counts with
+      no name on them, and what you typed into the ask box or a write-in. Nothing in either one points
+      back to you. That is the same reason they are safe.
+    </p>
+
+    <h2>Adults only</h2>
+    <p>
+      Squito is for men 18 and over. The app asks you to confirm it. Nothing we make is aimed at
+      anyone younger, and we don’t knowingly collect anything from anyone under 18.
+    </p>
+
+    <h2>Where</h2>
+    <p>
+      Squito is launching in the United States only. If that changes, this page changes first.
+    </p>
+
+    <h2>Still open in this draft</h2>
+    <ul>
+      <li>The name of the hosting company whose server receives the weekly counts. It will be named here before the first public version.</li>
+      <li>How long community posts are kept. That section is added here before the community opens.</li>
+      <li>An attorney’s review of the whole page.</li>
+    </ul>
+
+    <h2>When this page changes</h2>
+    <p>
+      The date at the top changes, and we say what changed. If a change affects what leaves your
+      phone, the app tells you before it takes effect.
+    </p>
+
+    <h2>Who we are</h2>
+    <address>
+      Squito LLC<br>
+      8735 Dunwoody Pl Ste 13647<br>
+      Atlanta, GA 30350<br>
+      United States
+    </address>
+    <p>
+      Questions about any of this: <a href="mailto:support@squito.com">support@squito.com</a>.
+      A person reads it.
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      <a href="./">Home</a>
+      <span class="sep">|</span>
+      <a href="support.html">Support</a>
+      <span class="sep">|</span>
+      <a href="mailto:hello@squito.com">hello@squito.com</a>
+    </p>
+    <p class="legal">© 2026 Squito LLC · Atlanta, Georgia</p>
+  </footer>
+</body>
+</html>
